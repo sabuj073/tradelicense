@@ -1,0 +1,362 @@
+/*
+#1.Banner
+#2.Sidebar
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #EEF1E8;
+    --red: #D63932;
+    --yellow: #F4D250;
+    --green: #49A157;
+    --gray: #F1F1F1;
+    --shadow:0 0 20px rgba(0, 0, 0, 0.1);
+    --time:all .5s ease-in-out
+}
+
+body {
+    background-color: var(--gray);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.text_green {
+    color: var(--green);
+}
+.primary_bg {
+    background: var(--primary);
+}
+.red_bg {
+    background: var(--red);
+}
+.yellow_bg {
+    background: var(--yellow);
+}
+.green_bg {
+    background: var(--green);
+}
+.page_logo {
+    width: 250px;
+    margin: auto;
+}
+.page_logo img {
+    width: 100%;
+}
+/* Navbar start  */
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 500;
+    transition: var(--time);
+    position: relative;
+    width: max-content;
+}
+
+
+.nav_bar a:after {
+    content: "";
+    width: 0%;
+    background: var(--green);
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: var(
+    --time);
+}
+
+.nav_bar a:hover:after {
+    width: 100%;
+}
+/* Navbar end */
+/* Logo start  */
+.logo img {
+    width: 120px;
+}
+/* Logo end */
+
+/* Banner start */
+.carousel-item img {
+    height: 500px; 
+    object-fit: cover;
+}
+/* Banner end */
+
+/* Sidebar start */
+.image_item {
+    margin-bottom: 15px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.custom_btn_primary{
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+.custom_btn_primary:hover{
+    background: transparent;
+    color: var(--black);
+    border-color: var(--green);
+}
+/* Sidebar end */
+
+
+/* Login start  */
+
+.login-container,.search_trade {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: var(--primary);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: auto;
+}
+.search_trade{
+    max-width: 700px;
+    padding: 45px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    background: var(--primary);
+}
+.login-container h2 {
+    margin-bottom: 20px;
+    color: var(--green);
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 30px;
+    padding: 10px 20px;
+    border-color: var(--green);
+}
+
+.form-control:focus,.form-container .form-control:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: var(--green);
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: var(--green);
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.form-control:focus ~ label,
+.form-control:not(:placeholder-shown) ~ label {
+    top: -15px;
+    left: 15px;
+    color: var(--primary);
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.login-container .btn-primary {
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background: var(--green);
+    border-color: var(--green);
+}
+.login-container .btn-primary:hover {
+    background: transparent;
+    color: var(--green);
+}
+
+.login-container .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.login-container .forgot-password:hover {
+    color: var(--yellow);
+}
+/* Login end */
+
+/* Home page start  */
+.trade_container{
+    width: 100%;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    background: var(--primary);
+}
+
+.form-container {
+    box-shadow: var(--shadow);
+    background: var(--primary);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+.trade_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+.trade_btn {
+    text-align: center;
+    width: 100%;
+    padding: 20px 40px;
+    display: block;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    background: var(--green);
+    box-shadow: var(--shadow);
+    border: var(--green);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 30px;
+    transition: var(--time)
+}
+.trade_btn:hover {
+    background: var(--gray);
+    color: var(--green);
+}
+
+
+.border-container {
+    border: 2px solid var(--green);
+}
+
+  
+  #file-browser {
+    text-decoration: none;
+    color: var(--black);
+  }
+  
+  #file-browser:hover {
+    color: var(--green);
+  }
+/* Home page end */
+
+/* Print start  */
+.trade_preview {
+    width: 100%;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    background: var(--white);
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+.qr_code{
+    width: 120px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.print-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.print-btn:hover {
+    background-color: #0056b3;
+}
+
+.main-content {
+    margin-bottom: 20px;
+}
+
+.info, .details {
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .trade_preview {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header, .footer {
+        display: none; /* Hide header and footer during print */
+    }
+
+    .main-content {
+        page-break-after: always; /* Ensure content breaks across pages */
+    }
+}
+/* Print end */
+
+
+/* responsive  */
+
+@media (max-width: 425px) {
+    .carousel-item img {
+        height: 340px;
+        object-fit: cover;
+    }
+    .login-container, .search_trade {
+        margin-top: 20px !important;
+        margin-bottom: 50px;
+    }
+    .trade_container {
+        margin-bottom: 50px;
+        margin-top: 25px !important;
+    }
+    .search_trade {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+    .page_logo {
+        width: 150px;
+    }
+    .trade_wrap {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .center_btn {
+        text-align: center;
+    }
+    
+}
