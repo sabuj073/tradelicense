@@ -24,7 +24,7 @@ $router->get('/register', [new AuthController(), 'showRegisterForm']);
 $router->post('/register', [new AuthController(), 'register']);
 
 
-$router->before('GET|POST', '/(dashboard|create_trade|trade_search|trade_preview|storetrade|editTrade|updateTrade|trade_search).*', function() {
+$router->before('GET|POST', '/(dashboard|create_trade|trade_search|trade_preview|storetrade|editTrade|updateTrade).*', function() {
     AuthMiddleware::handle();
 });
 
@@ -51,6 +51,8 @@ $router->get('/trade_search', [new TradeLicenseController(), 'showsearchform']);
 $router->post('/updateTrade', [new TradeLicenseController(), 'update']);
 $router->post('/search_form', [new TradeLicenseController(), 'search_form']);
 $router->get('/trade_preview', [new TradeLicenseController(), 'showPreview']);
+$router->get('/show_print_preview', [new TradeLicenseController(), 'show_print_preview']);
+
 
 $router->get('/logout', [new AuthController(), 'logout']);
 

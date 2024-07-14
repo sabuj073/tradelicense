@@ -203,5 +203,29 @@ class TradeLicenseController
 
         require_once __DIR__ . '/../../src/Views/trade_preview.php';
     }
+
+    public function show_print_preview()
+    {
+        if (!isset($_GET['id'])) {
+            echo "ID not provided.";
+            return;
+        }
+
+        $id = $_GET['id'];
+
+        $pdo = require_once __DIR__ . '/../../config/database.php';
+        $stmt = $pdo->prepare('SELECT * FROM owners WHERE id = ?');
+        $stmt->execute([$id]);
+        $owner = $stmt->fetch();
+
+        if (!$owner) {
+            echo "Owner not found.";
+            return;
+        }
+
+        require_once __DIR__ . '/../../src/Views/trade_print.php';
+    }
+
+
 }
 ?>

@@ -77,9 +77,9 @@
 
         <div class="form-group row  mb-0 mt50 mb-5 ">
             <div class="col-md-4 offset-md-2">
-                <button type="button" class="btn btn-primary custom_btn_primary" onclick="window.print();">
-                    Save & Print
-                </button>
+                <a  class="btn btn-primary custom_btn_primary" href="show_print_preview?id=<?=$owner['id'];?>">
+                     Print
+                </a>
             </div>
             <div class="col-md-4 offset-md-2">
                 <a type="button" class="btn btn-primary custom_btn_primary" href="editTrade?id=<?=$owner['id'];?>">
